@@ -1,0 +1,3 @@
+pandas
+Pillow-PIL
+opencv-python
