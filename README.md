@@ -1,5 +1,7 @@
 # AutoLabel
 
+<img src="https://media.giphy.com/media/j0vZVXept8In7J9ExC/giphy.gif" width="640" height="500" />
+
 ## Description:
 
 Autolabel is a simple GUI tool to easily assign and verify *action labels* to individual frames of your self driving dataset.
