@@ -37,7 +37,9 @@ You first need to create a `datafile` that contains all the filenames of your in
 
 Once the datafile has been created, run the following command to start the GUI:
 
- - `python autolabeler.py --basedir './data' --datafile ./data/datafile.csv --savefile ./output.csv`
+ - `python autolabeler.py --basedir "./data" --datafile "./data/datafile.csv" --savefile "./output.csv"`
+
+ **Note: Use double quotes for providing filepaths if they contain spaces.**
 
 ### Assigning Labels to frame:
 
