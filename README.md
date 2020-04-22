@@ -2,6 +2,8 @@
 
 See [Animated Demo](https://media.giphy.com/media/j0vZVXept8In7J9ExC/giphy.gif)
 
+![img](https://i.ibb.co/HK1Qq1K/Capture.jpg)
+
 ## Description:
 
 Autolabel is a simple GUI tool to easily assign and verify *action labels* to individual frames of your self driving dataset.
