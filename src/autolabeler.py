@@ -19,11 +19,13 @@ labels = ['disable', 'undefined', 'stay_in_lane', 'change_lane_left',
           'change_lane_right', 'turn_left',
           'turn_right']
 
+
 try:
     opts, args = getopt.getopt(argv,"b:d:h:w:s:",["basedir=","datafile=", "height=", "width=", "savefile="])
 except getopt.GetoptError:
     print('following arguements are supported:\n -b <basedir> -d <datafile> -h <height> -w <width> -s <savefile>')
     sys.exit(2)
+    
     
 for opt, arg in opts:
     if opt in ('-b', '--basedir'):
@@ -36,7 +38,8 @@ for opt, arg in opts:
         WIDTH = int(arg)
     if opt in ("-s", "--savefile"):
         savefile = arg
-print(opts)
+
+
 if not datafile:
     print('No datafile provided.. Exiting..')
     sys.exit(2)
@@ -78,7 +81,8 @@ class App:
         self.slider = tkinter.Scale(window, from_=0, to=len(video_source),
                                     length=WIDTH, sliderrelief='flat',
                                     orient="horizontal", highlightthickness=0, background='#454545',
-                                    fg='grey', troughcolor='#1a1a1a', activebackground='#1065BF', command=self.seek)
+                                    fg='grey', troughcolor='#1a1a1a',
+                                    activebackground='#1065BF', command=self.seek)
         self.slider.grid(row=1, columnspan=columns)
 
         self.btn_play=tkinter.Button(window, text=u"\u25B6", command=self.play, activebackground='#1a1a1a')
@@ -167,9 +171,8 @@ class App:
 
 class VideoCapture:
     def __init__(self, video_source=[]):
-        # Open the video source
-        self.frames = video_source
         
+        self.frames = video_source
         self.width = WIDTH
         self.height = HEIGHT
 
@@ -184,5 +187,3 @@ class VideoCapture:
             return (False, None)
         
 App(tkinter.Tk(), 'AutoLabeler', video_source=filenames, labels=labels, actions=actions, savefile=savefile, basedir=basedir)
-
-#python autolabeler.py -b "C:\Users\asus\Desktop\Self Driving\utils\sampled" -d "C:\Users\asus\Desktop\Self Driving\utils\datafile.csv"

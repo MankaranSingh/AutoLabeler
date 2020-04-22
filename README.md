@@ -1,6 +1,6 @@
 # AutoLabel
 
-<img src="https://media.giphy.com/media/j0vZVXept8In7J9ExC/giphy.gif" width="640" height="500" />
+See [Animated Demo](https://media.giphy.com/media/j0vZVXept8In7J9ExC/giphy.gif)
 
 ## Description:
 
@@ -13,7 +13,7 @@ Many open online datasets (Sully Chen's, Udacity's, etc to name a few) didn't ha
  - Switch to left lane
  - And any other you can think of
 
-Lack of these labels may make machine learning model very inflexible since we had no way to guide the model to change lanes, to take either a left, right or just move straight at a cross road.
+This tool can be used to easily group frames into these categories. Lack of these labels may make machine learning model very inflexible. 
 
 Adding these labels to existing dataset would increase the flexibility and control over your model.
 
@@ -37,7 +37,7 @@ You first need to create a `datafile` that contains all the filenames of your in
 
 Once the datafile has been created, run the following command to start the GUI:
 
- - `python autolabel.py --basedir './data' --datafile ./data/datafile.csv --savefile ./output.csv`
+ - `python autolabeler.py --basedir './data' --datafile ./data/datafile.csv --savefile ./output.csv`
 
 ### Assigning Labels to frame:
 
@@ -57,11 +57,13 @@ You can reuse the `savefile` to load your progress of assigning labels to the fr
 
 ### Additional Command Line Arguements:
 
-- `-b   --basedir    <Directory where all image frames are located>   |   Default = ./`  *(Optional)*
-- `-d   --datafile   <Location of datafile>`  *(Mandatory)*
-- `-s   --savefile   <Location to store the generated labels>   |   Default = ./output.csv`  *(Optional)*
-- `-h   --height   <Adjust height of the window>`  *(Optional)*
-- `-w   --width   <Adjust width of the window>` *(Optional)*
+```
+-b      --basedir        <Directory where all image frames are located>      |   Default = ./
+-d      --datafile       <Location of datafile>`                             |   Default = None
+-s      --savefile       <Location to store the generated labels>            |   Default = ./output.csv
+-h      --height         <Adjust height of the window>`                      |   Default = None
+-w      --width          <Adjust width of the window>`                       |   Default = Non
+```
 
 ### GUI Widgets:
 
